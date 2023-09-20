@@ -1,0 +1,81 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+      "UserStory": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "The title of the user story."
+          },
+          "userStory": {
+            "type": "string",
+            "description": "The main user story statement."
+          },
+          "description": {
+            "type": "string",
+            "description": "A detailed description of the user story."
+          },
+          "acceptanceCriteria": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of conditions to fulfill the user story."
+          },
+          "notes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of additional notes or considerations."
+          },
+          "priority": {
+            "$ref": "#/definitions/Priority",
+            "description": "Priority level of the user story."
+          },
+          "estimation": {
+            "oneOf": [
+              { "$ref": "#/definitions/FibonacciEstimation" },
+              { "$ref": "#/definitions/TShirtSizeEstimation" }
+            ],
+            "description": "Estimation for the user story, either in Fibonacci sequence or T-Shirt sizes."
+          }
+        },
+        "required": ["title", "userStory", "acceptanceCriteria", "priority", "estimation"]
+      },
+      "FibonacciEstimation": {
+        "type": "integer",
+        "enum": [1, 2, 3, 5, 8, 13],
+        "description": "Estimation values based on the Fibonacci sequence."
+      },
+      "TShirtSizeEstimation": {
+        "type": "string",
+        "enum": ["XS", "S", "M", "L", "XL", "XXL"],
+        "description": "Estimation values based on T-Shirt sizes."
+      },
+      "Priority": {
+        "type": "string",
+        "enum": ["Low", "Medium", "High"],
+        "description": "Priority levels for tasks or user stories."
+      }
+    },
+    "type": "object",
+    "properties": {
+      "sprintId": {
+        "type": "string",
+        "description": "The sprint number or identifier."
+      },
+      "duration": {
+        "type": "integer",
+        "description": "Duration of the sprint in days."
+      },
+      "userStories": {
+        "type": "array",
+        "items": { "$ref": "#/definitions/UserStory" },
+        "description": "List of user stories for the sprint."
+      }
+    },
+    "required": ["sprintId", "duration", "userStories"]
+  }
+  

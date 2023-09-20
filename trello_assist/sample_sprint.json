@@ -1,0 +1,40 @@
+{
+    "sprintId": "SPR-12345",
+    "duration": 14,
+    "description": "This sprint focuses on enhancing the user experience and adding new search features.",
+    "userStories": [
+      {
+        "title": "Improve Search Autocomplete",
+        "userStory": "As a user, I want the search autocomplete to suggest relevant terms so that I can quickly find what I'm looking for.",
+        "description": "Enhance the search bar's autocomplete feature to provide more relevant and diverse suggestions.",
+        "acceptanceCriteria": [
+          "Autocomplete suggestions appear after typing 3 characters.",
+          "Suggestions are ranked by relevance.",
+          "No more than 10 suggestions are shown at once."
+        ],
+        "notes": [
+          "Use machine learning for better prediction.",
+          "Ensure fast response times."
+        ],
+        "priority": "High",
+        "estimation": 8
+      },
+      {
+        "title": "Add Search Filters",
+        "userStory": "As a user, I want to filter search results by category so that I can narrow down my search.",
+        "description": "Provide filtering options in the search results page to allow users to refine their search by categories.",
+        "acceptanceCriteria": [
+          "Filters are visible on the search results page.",
+          "Multiple filters can be applied at once.",
+          "Results update instantly after applying filters."
+        ],
+        "notes": [
+          "Consider adding a 'clear all filters' option.",
+          "Ensure mobile responsiveness."
+        ],
+        "priority": "Medium",
+        "estimation": 5
+      }
+    ]
+  }
+  
