@@ -83,7 +83,7 @@ This command will create a new Trello board with the specified name and descript
 #### Invocation Example:
 ```sh
 python trello_cli.py create_board --api-key YOUR_API_KEY --oauth-token YOUR_OAUTH_TOKEN --board-name "New Board" --board-desc "Description of the new board"
-
+```
 
 ### Create Sprint Command
 
@@ -100,7 +100,7 @@ This command will read a user story file specified by `--filename`, validate it 
 #### Invocation Example:
 ```sh
 python trello_cli.py create_sprint --api-key YOUR_API_KEY --oauth-token YOUR_OAUTH_TOKEN --filename "your_sprint_file.json"
-
+```
 
 ## Contributing
 
@@ -109,5 +109,5 @@ Contributions are greatly appreciated! Please review the [GitHub issues](https:/
 ## Future Work
 
 For upcoming features and improvements, please refer to the issues tagged with `enhancements` in the [GitHub issues](https://github.com/mbeauv/trello_assist/issues) section of our repository.
-```
+
 
