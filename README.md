@@ -17,8 +17,8 @@ Trello Assist currently supports the following features:
 
 1. **Clone the Repository**:
    ```sh
-   git clone [Your Repository URL]
-   cd [Your Repository Name]
+   git clone https://github.com/mbeauv/trello_assist
+   cd trello_assist
    ```
 
 2. **Create a Virtual Environment** (Optional but recommended):
@@ -34,7 +34,7 @@ Trello Assist currently supports the following features:
 
 4. **Run the Application**:
    ```sh
-   python [Your Main Script].py
+   python main.py
    ```
 
 ### Docker Setup
@@ -46,10 +46,9 @@ Trello Assist currently supports the following features:
 
 2. **Run the Docker Container**:
    ```sh
-   docker run -p 8000:8000 trello_assist
+   docker run trello_assist
    ```
 
-   Replace `8000:8000` with the actual port mapping you need.
 
 ### Configuration
 
