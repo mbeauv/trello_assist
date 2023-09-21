@@ -85,11 +85,10 @@ python trello_cli.py set_config
 
 ## Contributing
 
-Contributions are greatly appreciated! Please review the [GitHub issues](https://github.com/[YourUsername]/[YourRepository]/issues) section of our repository to find something that interests you. Look for issues tagged with `enhancements` for areas where we plan future work.
+Contributions are greatly appreciated! Please review the [GitHub issues](https://github.com/mbeauv/trello_assist/issues) section of our repository to find something that interests you. Look for issues tagged with `enhancements` for areas where we plan future work.
 
 ## Future Work
 
-For upcoming features and improvements, please refer to the issues tagged with `enhancements` in the [GitHub issues](https://github.com/[YourUsername]/[YourRepository]/issues) section of our repository.
+For upcoming features and improvements, please refer to the issues tagged with `enhancements` in the [GitHub issues](https://github.com/mbeauv/trello_assist/issues) section of our repository.
 ```
 
-Make sure to replace the placeholder text, especially the GitHub URLs, with the actual details relevant to your project.
