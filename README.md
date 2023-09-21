@@ -67,21 +67,40 @@ python trello_cli.py set_config
 
 ## Usage
 
-### Create a Trello Board
+### Create Board Command
 
-[Provide specific command and examples for creating a Trello board.]
+The `create_board` command is used to create a new Trello board. 
 
-### Delete a Trello Board
+#### Parameters:
+- `--api-key` (Required): Your Trello API key. If not provided, you will be prompted to enter it.
+- `--oauth-token` (Required): Your Trello OAuth token. If not provided, you will be prompted to enter it.
+- `--board-name` (Required): The name of the board to be created. You will be prompted to enter it if not provided.
+- `--board-desc` (Optional): An optional description for the board.
 
-[Provide specific command and examples for deleting a Trello board.]
+#### Description:
+This command will create a new Trello board with the specified name and description. If the board is successfully created, the command will output the ID of the newly created board. If the board creation fails, it will output an error message.
 
-### List Cards
+#### Invocation Example:
+```sh
+python trello_cli.py create_board --api-key YOUR_API_KEY --oauth-token YOUR_OAUTH_TOKEN --board-name "New Board" --board-desc "Description of the new board"
 
-[Provide specific command and examples for listing cards in a Trello board.]
 
-### Describe a Card
+### Create Sprint Command
 
-[Provide specific command and examples for describing a card in a Trello board.]
+The `create_sprint` command is used to process a user story file and create a corresponding Trello board.
+
+#### Parameters:
+- `--api-key` (Required): Your Trello API key. If not provided, you will be prompted to enter it.
+- `--oauth-token` (Required): Your Trello OAuth token. If not provided, you will be prompted to enter it.
+- `--filename` (Optional): The name of the file containing sprint info. Defaults to `sample_sprint.json` if not provided.
+
+#### Description:
+This command will read a user story file specified by `--filename`, validate it against a predefined schema, and create a corresponding Trello board. If the board is successfully created, the command will output the result. If the board creation fails, it will output an error message. If the file processing fails, it will print a failure message.
+
+#### Invocation Example:
+```sh
+python trello_cli.py create_sprint --api-key YOUR_API_KEY --oauth-token YOUR_OAUTH_TOKEN --filename "your_sprint_file.json"
+
 
 ## Contributing
 
