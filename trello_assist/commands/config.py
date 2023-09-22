@@ -14,12 +14,15 @@ def read_default_api_key():
 
     # Ensure the file exists
     if not os.path.exists(file_path):
-        return config.get("api_key", "API key not set")
+        return None
 
     # Read and return the API key and token from the config.json file
     with open(file_path, 'r') as file:
         config = json.load(file)
-        return config.get("api_key", "API key not set")
+        if config:
+            return config.get("api_key", "API key not set")
+        else:
+            return None
     
 def read_default_api_token():
      # Define the directory and file path
@@ -28,9 +31,12 @@ def read_default_api_token():
 
     # Ensure the file exists
     if not os.path.exists(file_path):
-        return config.get("api_token", "API token not set")
+        return None
 
     # Read and return the API key and token from the config.json file
     with open(file_path, 'r') as file:
         config = json.load(file)
-        return config.get("api_token", "API token not set")
+        if config:
+            return config.get("api_token", "API token not set")
+        else:
+            return None

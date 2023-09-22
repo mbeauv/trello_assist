@@ -70,6 +70,10 @@
         "type": "integer",
         "description": "Duration of the sprint in days."
       },
+      "description": {
+        "type": "string",
+        "description": "A description of what the theme of the sprint is."
+      },
       "userStories": {
         "type": "array",
         "items": { "$ref": "#/definitions/UserStory" },

@@ -31,7 +31,7 @@ class SprintBoardFactory:
             self.api_key,
             self.api_token,
             board_info["sprintId"],
-            board_info["description"])
+            board_info["sprintDescription"])
         
     def create_sprint_lanes(self, board_id):
         lanes = [ "Backlog", "In Progress", "Review", "Done" ]
